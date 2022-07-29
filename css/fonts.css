@@ -9041,6 +9041,10 @@
 	content: "\e015";
 }
 
+.fl-bigmug-line-industrie:before {
+	content: "\e050";
+}
+
 .fl-bigmug-line-checkmark14:before {
 	content: "\e016";
 }
@@ -9470,7 +9474,7 @@
 }
 
 .fl-bigmug-line-paintbrush9:before {
-	content: "\e081";
+	content: "\e0af";
 }
 
 .fl-bigmug-line-paper122:before {
