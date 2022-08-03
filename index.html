@@ -1026,7 +1026,7 @@
           
           <!--Modal Temoignage-->
           
-            <a class="button button-secondary button-pipaluk" href="#temoignage">VOTRE AVIS ICI</a>
+          <a class="button button-secondary button-pipaluk" href="#temoignage">VOTRE AVIS ICI</a>
            
           <div id="temoignage" class="overlay">
             <div class="popup ">
@@ -1034,18 +1034,18 @@
               <a class="close" href="#">&times;</a>
 
               <div class="content">
-                    <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="temoignage" method="post" action="#">
+                    <form class="rd-form rd-mailform" name="formTemoignage" method="post" action="">
                       <div class="form-wrap">
                         <input class="form-input" id="temoignage-name" type="text" name="name" data-constraints="@Required"/>
                         <label class="form-label" for="temoignage-name">Nom</label>
                       </div>
                       <div class="form-wrap">
-                        <input class="form-input" id="temoignage-email" type="email" name="email" data-constraints="@Email @Required"/>
+                        <input class="form-input" id="temoignage-email" value="999999" type="email" name="email" data-constraints="@Email @Required"/>
                         <label class="form-label" for="temoignage-email">E-mail</label>
                       </div>
                       <div class="form-wrap">
-                        <label class="form-label" for="temoignage-message">Écrire votre avis</label>
-                        <textarea class="form-input" id="temoignage-message" name="message" data-constraints="@Required"></textarea>
+                        <label class="form-label" for="messageWhatsapp">Écrire votre avis</label>
+                        <textarea class="form-input" id="messageWhatsapp" name="messageWhatsapp"></textarea>
                       </div>
                       <!--star Rating-->
                       <div class="satr_rating">
@@ -1054,11 +1054,13 @@
                         <button class="star">&#9734;</button>
                         <button class="star">&#9734;</button>
                         <button class="star">&#9734;</button>
+                        <p class="starCounter">0 / 5</p>
                       </div>
+                      
                      <script>
                       
                      </script> 
-                      <button class="button button-block button-ujarak button-secondary" type="submit">Envoyer</button>
+                      <button class="button button-block button-ujarak button-secondary" onClick="sendToWhatsApp()">Envoyer</button>
                     </form>
               </div>
             </div>
@@ -1259,6 +1261,8 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/stars.js"></script>
+    <script src="js/sendWhatsappMessage.js"></script>
+   
    
    
    
