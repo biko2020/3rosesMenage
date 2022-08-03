@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css">
     <title>3 Roses Ménage</title>
-  </head>
+    
+   </head>
   <body>
     <!--Animation de chargement -->
     <div class="preloader">
@@ -1021,8 +1023,48 @@
               </article>
             </div>
           </div>
-          <a class="button button-secondary button-pipaluk" href="temoignage.html">VOTRE AVIS ICI</a>
+          
+          <!--Modal Temoignage-->
+          
+            <a class="button button-secondary button-pipaluk" href="#temoignage">VOTRE AVIS ICI</a>
+           
+          <div id="temoignage" class="overlay">
+            <div class="popup ">
+              <h5 class="font-weight-normal">Résumez votre avis ou mettez en évidence un détail intéressant </h5>
+              <a class="close" href="#">&times;</a>
+
+              <div class="content">
+                    <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="temoignage" method="post" action="#">
+                      <div class="form-wrap">
+                        <input class="form-input" id="temoignage-name" type="text" name="name" data-constraints="@Required"/>
+                        <label class="form-label" for="temoignage-name">Nom</label>
+                      </div>
+                      <div class="form-wrap">
+                        <input class="form-input" id="temoignage-email" type="email" name="email" data-constraints="@Email @Required"/>
+                        <label class="form-label" for="temoignage-email">E-mail</label>
+                      </div>
+                      <div class="form-wrap">
+                        <label class="form-label" for="temoignage-message">Écrire votre avis</label>
+                        <textarea class="form-input" id="temoignage-message" name="message" data-constraints="@Required"></textarea>
+                      </div>
+                      <!--star Rating-->
+                      <div class="satr_rating">
+                        <button class="star">&#9734;</button>
+                        <button class="star">&#9734;</button>
+                        <button class="star">&#9734;</button>
+                        <button class="star">&#9734;</button>
+                        <button class="star">&#9734;</button>
+                      </div>
+                     <script>
+                      
+                     </script> 
+                      <button class="button button-block button-ujarak button-secondary" type="submit">Envoyer</button>
+                    </form>
+              </div>
+            </div>
+          </div>
         </div>
+       
       </section>
       <!--DEMMANDE DEVIS-->
       <section class="section section-sm section-first bg-default text-center">
@@ -1129,7 +1171,7 @@
               <div class="box-footer box-footer-small">
                 <div class="footer-brand">
                   <a href="index.html">
-                    <img src="images/logo-3roses-1024x279.png" alt="" width="229" height="43"/>
+                    <img src="images/logo-3roses-1024x279-trans.png" alt="" width="229" height="43"/>
                   </a>
                 </div>
                 <p class="text-width-medium">Nous apportons une approche personnelle et efficace chez chacun de nos clients. N’hésitez pas à nous contacter pour obtenir une estimation pour des besoins résidentiaux, commerciaux, institutionnels, gouvernementaux, industriels et en nettoyage après construction.</p>
@@ -1137,10 +1179,10 @@
                   <div class="contact-classic-item">
                     <div class="unit align-items-center">
                       <div class="unit-left">
-                        <h6 class="contact-classic-title">Adresse</h6>
+                        <h6 class="contact-classic-title">Siège Social</h6>
                       </div>
                       <div class="unit-body contact-classic-link"></div>
-                      <a href="#">45231 saint-Mono Laval- Quebec-Canada </a>
+                      <a href="#">344 Boul Goyer St-Eustache QC J7P 5K1- Québec-Canada </a>
                     </div>
                   </div>
                   <div class="contact-classic-item">
@@ -1149,7 +1191,7 @@
                         <h6 class="contact-classic-title">Téléphone</h6>
                       </div>
                       <div class="unit-body contact-classic-link">
-                        <a href="tel:#">(514) 463-9734</a>
+                        <a href="tel:#">+1 (514) 463-9734</a>
                       </div>
                     </div>
                   </div>
@@ -1159,6 +1201,8 @@
                         <h6 class="contact-classic-title">E-mails</h6>
                       </div>
                       <div class="unit-body contact-classic-link">
+                        <a href="mailto:#">aitoufkir.rachid@yahoo.net</a>
+                        <a href="mailto:#">admin@3rosesmenage.net</a>
                         <a href="mailto:#">info@rosesmenage.com</a>
                       </div>
                     </div>
@@ -1214,5 +1258,10 @@
     </div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/stars.js"></script>
+   
+   
+   
+
   </body>
 </html>
